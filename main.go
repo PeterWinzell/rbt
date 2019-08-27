@@ -102,7 +102,7 @@ func setupDataPoints()[] GPSLocation{
 	}
 
 	gps7.Location.Zindex = GetZorderIndex(gps7.Location.Latitude,gps7.Location.Longitude)
-	locations = append(locations, *gps6)
+	locations = append(locations, *gps7)
 
 	return locations
 
@@ -110,6 +110,8 @@ func setupDataPoints()[] GPSLocation{
 
 
 func main() {
+
+	// CallChange()
 
 	//var location1 locations
 	location1 := Queue{GetQueue()}
@@ -121,17 +123,32 @@ func main() {
 	fmt.Printf("type of location1 is %T\n", location1)
     fmt.Printf("type of location2 is %T\n", location2)
 
-    _,err := location1.AddGPSPosition(locations[0])
 
-	l2,err := location1.AddGPSPosition(locations[1])
+	location1.AddGPSPosition(locations[0])
+	location1.AddGPSPosition(locations[1])
+	location1.AddGPSPosition(locations[2])
+	location1.AddGPSPosition(locations[3])
+	location1.AddGPSPosition(locations[4])
+	location1.AddGPSPosition(locations[5])
+	l2,err :=location1.AddGPSPosition(locations[6])
+
 	if err == nil{
 		fmt.Printf("number of adjacent elemnts in queue is  %d\n", len(l2))
 	}
 
 	location2.AddGPSPosition(locations[0])
-	l3,err := location2.AddGPSPosition(locations[1])
+	location2.AddGPSPosition(locations[1])
+	location2.AddGPSPosition(locations[2])
+	location2.AddGPSPosition(locations[3])
+	location2.AddGPSPosition(locations[4])
+	location2.AddGPSPosition(locations[5])
+
+	l4, err := location2.AddGPSPosition(locations[6])
+
+
+
 	if err == nil{
-		fmt.Printf("number of adjacent elemnts in rbt tree is  %d\n", len(l3))
+		fmt.Printf("number of adjacent elemnts in rbt tree is  %d\n", len(l4))
 	}
 	//location2.AddGPSPosition(*gps)
 

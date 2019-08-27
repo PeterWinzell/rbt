@@ -164,36 +164,37 @@ func (t *TreeExtended) GetNodeFromKey(key interface{}) (foundNode *rbt.Node){
 }
 
 // Find predecessor and successor to a tree node. O(h) where the h is height of the tree. h = log n at worst case
-func (t* TreeExtended) FindPreSuc(root *rbt.Node,key interface{})(*rbt.Node,*rbt.Node){
-	if (root == nil) {
-		return nil, nil
-	}
+func (t* TreeExtended) FindPreSuc(root *rbt.Node,key interface{},pre *rbt.Node,suc *rbt.Node){
+	if (root != nil) {
 
-	if (t.Comparator(root.Key,key) == 0){
-		// max value in left subtree is predecessor
-		var pre, suc *rbt.Node
-		if root.Left != nil{
-			tmp := root.Left
-			for tmp.Right != nil{
-				tmp = tmp.Right
+		if t.Comparator(root.Key, key) == 0 {
+
+			// max value in left subtree is predecessor
+
+			if root.Left != nil {
+				tmp := root.Left
+				for tmp.Right != nil {
+					tmp = tmp.Right
+				}
+				*pre = *tmp
+
 			}
-			pre = tmp
-		}
 
-		if root.Right != nil{
-			tmp := root.Right
-			for tmp.Left != nil{
-				tmp = tmp.Left
+			if root.Right != nil {
+				tmp := root.Right
+				for tmp.Left != nil {
+					tmp = tmp.Left
+				}
+				*suc = *tmp
 			}
-			suc = tmp
+			//return pre,suc
+		}else if t.Comparator(root.Key, key) == 1 {
+            *suc = *root
+			t.FindPreSuc(root.Left, key, pre, suc)
+		} else {
+			*pre = *root
+			t.FindPreSuc(root.Right, key, pre, suc)
 		}
-		return pre,suc
-	}
-
-	if t.Comparator(root.Key,key) == 1{
-		return t.FindPreSuc(root.Left,key)
-	} else{
-		return t.FindPreSuc(root.Right,key)
 	}
 }
 
@@ -242,6 +243,16 @@ func (t TreeExtended) nearbyObject(driver GPSLocation,detect GPSLocation,vehicle
 	return false
 }
 
+func IsMemberOf(list [] GPSLocation, Key GPSLocation)(bool){
+
+	found := false
+	i := 0
+	for found == false && i < len(list){
+		found = (list[i].Location.Zindex == Key.Location.Zindex) && (list[i].Uuid == Key.Uuid)
+		i++
+	}
+	return found
+}
 
 func (t TreeExtended) getNearbyObjects(location GPSLocation)[] GPSLocation{
 
@@ -254,25 +265,33 @@ func (t TreeExtended) getNearbyObjects(location GPSLocation)[] GPSLocation{
 	stack := lls.New()
 	stack.Push(tmplocation)
 
+	pre := rbt.Node{}
+    var suc rbt.Node
+
 	for found == false  && (stack.Empty() ==  false){
 
 		key,_ := stack.Pop()
-		pre, suc := t.FindPreSuc(t.Root,key )
-		if pre == nil && suc == nil {
+		t.FindPreSuc(t.Root,key,&pre,&suc )
+		if pre.Key == nil && suc.Key == nil {
 			break;
 		}
 
-		if pre != nil {
+		if pre.Key != nil {
 			if (t.nearbyObject(location,pre.Key.(GPSLocation),0)) {
-				listofdectees = append(listofdectees, pre.Key.(GPSLocation))
+				if (!IsMemberOf(listofdectees, pre.Key.(GPSLocation))) {
+					listofdectees = append(listofdectees, pre.Key.(GPSLocation))
+					stack.Push(pre.Key) // we don't know if it was time or proximity
+				}
 			}
-			stack.Push(pre.Key) // we don't know if it was time or proximity
 		}
-		if suc != nil {
+		if suc.Key != nil {
 			if (t.nearbyObject(location,suc.Key.(GPSLocation),0)) {
-				listofdectees = append(listofdectees, suc.Key.(GPSLocation))
+				if (!IsMemberOf(listofdectees, suc.Key.(GPSLocation))) {
+					listofdectees = append(listofdectees, suc.Key.(GPSLocation))
+					stack.Push(suc.Key)
+				}
 			}
-			stack.Push(suc.Key) // we don't know if it was time or proximity
+			 // we don't know if it was time or proximity
 		}
 
 
