@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d1a8a50-6949-4412-8875-fcffaac883d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/refval.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tree_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locationsharing.go" beforeDir="false" afterPath="$PROJECT_DIR$/locationsharing.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tree_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/locationsharing.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1606">
-              <caret line="295" lean-forward="true" selection-start-line="295" selection-end-line="295" />
+            <state relative-caret-position="1671">
+              <caret line="207" column="21" lean-forward="true" selection-start-line="207" selection-start-column="21" selection-end-line="207" selection-end-column="21" />
               <folding>
                 <element signature="e#14#192#0" expanded="true" />
               </folding>
@@ -29,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tree_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="160" column="1" lean-forward="true" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
+            <state relative-caret-position="511">
+              <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
               <folding>
                 <element signature="e#14#46#0" expanded="true" />
               </folding>
@@ -44,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/testing/testing.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
-              <caret line="790" column="22" lean-forward="true" selection-start-line="790" selection-start-column="22" selection-end-line="790" selection-end-column="22" />
+            <state relative-caret-position="152">
+              <caret line="791" selection-start-line="791" selection-end-line="791" />
             </state>
           </provider>
         </entry>
@@ -63,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2250">
-              <caret line="150" column="19" lean-forward="true" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
+              <caret line="150" column="19" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -139,8 +136,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1774" />
-    <option name="y" value="38" />
+    <option name="x" value="1914" />
+    <option name="y" value="182" />
     <option name="width" value="1680" />
     <option name="height" value="961" />
   </component>
@@ -241,34 +238,34 @@
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="tree_test_go - 2019.08.26 at 14h 38m 26s.xml">
+    <history-entry file="tree_test_go - 2019.08.27 at 11h 27m 36s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.08.26 at 14h 38m 50s.xml">
+    <history-entry file="tree_test_go - 2019.08.27 at 11h 30m 09s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.08.26 at 15h 05m 07s.xml">
+    <history-entry file="tree_test_go - 2019.08.27 at 11h 34m 17s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.08.26 at 15h 05m 38s.xml">
+    <history-entry file="tree_test_go - 2019.08.27 at 11h 38m 30s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.08.26 at 15h 06m 02s.xml">
+    <history-entry file="tree_test_go - 2019.08.27 at 11h 39m 59s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.08.26 at 16h 47m 07s.xml">
+    <history-entry file="tree_test_go - 2019.08.27 at 11h 40m 34s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.08.26 at 17h 09m 41s.xml">
+    <history-entry file="tree_test_go - 2019.08.27 at 11h 41m 56s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.08.26 at 17h 11m 36s.xml">
+    <history-entry file="tree_test_go - 2019.08.27 at 11h 44m 49s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.08.26 at 17h 14m 35s.xml">
+    <history-entry file="tree_test_go - 2019.08.27 at 11h 45m 07s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.08.26 at 17h 30m 47s.xml">
+    <history-entry file="tree_test_go - 2019.08.27 at 11h 48m 09s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
@@ -282,16 +279,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1835" y="38" width="1680" height="961" extended-state="0" />
-    <editor active="true" />
+    <frame x="1914" y="182" width="1680" height="961" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17216118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28653625" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.52819335" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25086308" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.26352128" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32911393" />
@@ -432,7 +428,7 @@
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2250">
-          <caret line="150" column="19" lean-forward="true" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
+          <caret line="150" column="19" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -445,27 +441,27 @@
     </entry>
     <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/testing/testing.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="790" column="22" lean-forward="true" selection-start-line="790" selection-start-column="22" selection-end-line="790" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/locationsharing.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1606">
-          <caret line="295" lean-forward="true" selection-start-line="295" selection-end-line="295" />
-          <folding>
-            <element signature="e#14#192#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="791" selection-start-line="791" selection-end-line="791" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tree_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="160" column="1" lean-forward="true" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
+        <state relative-caret-position="511">
+          <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
           <folding>
             <element signature="e#14#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locationsharing.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1671">
+          <caret line="207" column="21" lean-forward="true" selection-start-line="207" selection-start-column="21" selection-end-line="207" selection-end-column="21" />
+          <folding>
+            <element signature="e#14#192#0" expanded="true" />
           </folding>
         </state>
       </provider>

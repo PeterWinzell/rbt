@@ -10,7 +10,7 @@ import (
 
 const (
 
-	MaxDetections = 5
+	MaxDetections = 2
 	Expirationtime = 5 // throw away any entries older that this (seconds)
 	Timedepth = 5 // only consider queue neighbours with in this (seconds)
 

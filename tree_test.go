@@ -10,7 +10,7 @@ import (
 
 
 var inorderfacit = [9]int64{5,6,7,9,10,11,12,15,20}
-var preorderfacit= [9]int64{5,6,7,9,10,11,12,15,20}
+
 
 func getTestData()[] GPSLocation{
 	datapoints := [9]uint64{10,5,7,6,15,12,11,9,20}
@@ -67,7 +67,10 @@ func TestTreeInsertion(t *testing.T){
 				fmt.Print( "{",gpso.Location.Zindex, "}")
 			}
 			fmt.Println(" ")
+		}else{
+			t.Error("could not insert GPS position")
 		}
+
 	}
 
 }
@@ -84,17 +87,6 @@ func PrintPreOrder(t *rbt.Node){
 	PrintPreOrder(t.Right)
 
 }
-
-func InOrder(t *rbt.Node) {
-	if (t == nil) {
-		return
-	}
-	InOrder(t.Left)
-	fmt.Println(t.Key.(GPSLocation).Location.Zindex)
-
-	InOrder(t.Right)
-}
-
 
 func TestPrintTree(t *testing.T){
 	location_tree := TreeExtended{GetTree()}
@@ -157,5 +149,47 @@ func TestPreSuc(t *testing.T){
 	if (suc.Key.(GPSLocation).Location.Zindex != 20){
 		t.Errorf(" expected 20 got %d",suc.Key.(GPSLocation).Location.Zindex)
 	}
+
+}
+
+
+func inOrder(t *rbt.Node,counter *int ,val *bool){
+
+	if (t  == nil){
+		return
+	}
+	inOrder(t.Left,counter,val)
+
+	key := t.Key.(GPSLocation).Location.Zindex
+	if (inorderfacit[*counter] != int64(key)){
+		*val = false
+	}
+
+	*counter = *counter + 1
+	inOrder(t.Right,counter,val)
+
+	return
+}
+
+func TestInorder(t *testing.T){
+	location_tree := testTreeData()
+	counter := 0
+	inorder := true
+	inOrder(location_tree.Root,&counter,&inorder)
+
+    if (inorder == false){
+    	t.Errorf(" expected true got %t ", inorder)
+	}
+
+	inorder = true
+	counter = 0
+	inorderfacit[7] = 14
+	inOrder(location_tree.Root,&counter,&inorder)
+	if (inorder == true){
+		t.Errorf(" expected false got %t ", inorder)
+	}
+}
+
+func TestNearbyNeighbours(t *testing.T) {
 
 }
