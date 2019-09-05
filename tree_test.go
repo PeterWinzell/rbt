@@ -12,6 +12,133 @@ import (
 var inorderfacit = [9]int64{5,6,7,9,10,11,12,15,20}
 
 
+func getOrderTestData(){
+
+}
+
+
+
+func getDataZOrderTest()[] *GPSLocation{
+
+	// below equator
+	var locations [] *GPSLocation
+
+	loc3 := &GPSLocation{
+		Location: Locationdata{
+			Latitude:37.391547,
+			Longitude:-122.034613,
+			Accuracy:0,
+			Zindex:0,
+		},
+		Gpsobject:0,
+		Uuid:"Pastoria Avenue 2",
+		Timestamp:0,
+	}
+	loc3.Location.Zindex = GetZorderIndex(loc3.Location.Latitude,loc3.Location.Longitude)
+	locations = append(locations, loc3)
+
+	loc1 := &GPSLocation{
+		Location: Locationdata{
+			Latitude:-32.576457,
+			Longitude:-66.228494,
+			Accuracy:0,
+			Zindex:0,
+		},
+		Gpsobject:0,
+		Uuid:"San Louis,Arg",
+		Timestamp:0,
+	}
+	loc1.Location.Zindex = GetZorderIndex(loc1.Location.Latitude,loc1.Location.Longitude)
+	locations = append(locations, loc1)
+
+	//local gps
+
+	loc2 := &GPSLocation{
+		Location: Locationdata{
+			Latitude:37.390227,
+			Longitude:-122.034238,
+			Accuracy:0,
+			Zindex:0,
+		},
+		Gpsobject:0,
+		Uuid:"Pastoria Avenue 1",
+		Timestamp:0,
+	}
+	loc2.Location.Zindex = GetZorderIndex(loc2.Location.Latitude,loc2.Location.Longitude)
+	locations = append(locations, loc2)
+
+
+
+	loc4 := &GPSLocation{
+		Location: Locationdata{
+			Latitude:37.378128,
+			Longitude:-122.038240,
+			Accuracy:0,
+			Zindex:0,
+		},
+		Gpsobject:0,
+		Uuid:"Pastoria Avenue 3",
+		Timestamp:0,
+	}
+	loc4.Location.Zindex = GetZorderIndex(loc4.Location.Latitude,loc4.Location.Longitude)
+	locations = append(locations, loc4)
+
+	return locations
+}
+
+func swap(location1 *GPSLocation,location2 *GPSLocation){
+	temp := *location1
+	*location1 = *location2
+	*location2 = temp
+}
+
+func sort(locations [] *GPSLocation){
+
+	for i := 1; i < len(locations);i++{
+		j := i
+		for j>0  && (byGPSIndexation(*locations[j-1],*locations[j]) == 1) {
+            swap(locations[j],locations[j-1])
+			j--;
+		}
+	}
+
+}
+
+func printlocations(locations []* GPSLocation){
+	for _,e := range locations{
+		fmt.Println(e.Uuid)
+	}
+	fmt.Println("")
+}
+
+func getLatLong(loc * GPSLocation) (float64,float64){
+	return loc.Location.Latitude,loc.Location.Longitude
+}
+
+func TestZorder(t *testing.T){
+
+	locations := getDataZOrderTest()
+	sort(locations)
+	lat1,long1 := getLatLong(locations[0])
+	var distances [] float64
+
+	for i := 1; i < len(locations);i++{
+		lat2,long2 := getLatLong(locations[i])
+		distances = append(distances,GetApproxDistance2(lat1, long1,lat2,long2))
+	}
+
+	distanceok := true
+	index := 1
+	shortestdistance := distances[0]
+	for distanceok && index < len(distances){
+		distanceok = shortestdistance < distances[index]
+		index++
+	}
+   if (distanceok == false) {
+	   t.Errorf("zorder did not keep distance")
+   }
+}
+
 func getTestData()[] GPSLocation{
 	datapoints := [9]uint64{10,5,7,6,15,12,11,9,20}
 	var list  [] GPSLocation
