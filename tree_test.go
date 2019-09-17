@@ -17,71 +17,39 @@ func getOrderTestData(){
 }
 
 
+func getAGPSObject(lat float64,long float64,name string) *GPSLocation{
+	obj := &GPSLocation{
+		Location:Locationdata{
+			Latitude:lat,
+			Longitude:long,
+			Accuracy:0,
+			Zindex:0,
+		},
+		Gpsobject:0,
+		Uuid:name,
+		Timestamp:0,
+	}
+	obj.Location.Zindex = GetZorderIndex(lat,long)
+	return obj
+}
 
 func getDataZOrderTest()[] *GPSLocation{
 
 	// below equator
 	var locations [] *GPSLocation
 
-	loc3 := &GPSLocation{
-		Location: Locationdata{
-			Latitude:37.391547,
-			Longitude:-122.034613,
-			Accuracy:0,
-			Zindex:0,
-		},
-		Gpsobject:0,
-		Uuid:"Pastoria Avenue 2",
-		Timestamp:0,
-	}
-	loc3.Location.Zindex = GetZorderIndex(loc3.Location.Latitude,loc3.Location.Longitude)
-	locations = append(locations, loc3)
 
-	loc1 := &GPSLocation{
-		Location: Locationdata{
-			Latitude:-32.576457,
-			Longitude:-66.228494,
-			Accuracy:0,
-			Zindex:0,
-		},
-		Gpsobject:0,
-		Uuid:"San Louis,Arg",
-		Timestamp:0,
-	}
-	loc1.Location.Zindex = GetZorderIndex(loc1.Location.Latitude,loc1.Location.Longitude)
-	locations = append(locations, loc1)
-
-	//local gps
-
-	loc2 := &GPSLocation{
-		Location: Locationdata{
-			Latitude:37.390227,
-			Longitude:-122.034238,
-			Accuracy:0,
-			Zindex:0,
-		},
-		Gpsobject:0,
-		Uuid:"Pastoria Avenue 1",
-		Timestamp:0,
-	}
-	loc2.Location.Zindex = GetZorderIndex(loc2.Location.Latitude,loc2.Location.Longitude)
-	locations = append(locations, loc2)
-
-
-
-	loc4 := &GPSLocation{
-		Location: Locationdata{
-			Latitude:37.378128,
-			Longitude:-122.038240,
-			Accuracy:0,
-			Zindex:0,
-		},
-		Gpsobject:0,
-		Uuid:"Pastoria Avenue 3",
-		Timestamp:0,
-	}
-	loc4.Location.Zindex = GetZorderIndex(loc4.Location.Latitude,loc4.Location.Longitude)
-	locations = append(locations, loc4)
+	locations = append(locations, getAGPSObject(37.391547,-122.034613,"Pastoria Avenue 2"))
+	locations = append(locations, getAGPSObject(-32.576457,-66.228494,"San Loius Argentina"))
+	locations = append(locations, getAGPSObject(37.390227,-122.034238,"Pastoria Avenue 1"))
+	locations = append(locations, getAGPSObject(37.378128,-122.038240,"Pastoria Avenue 3"))
+	locations = append(locations, getAGPSObject(37.369688,-122.041008,"Hollen beck av"))
+	locations = append(locations, getAGPSObject(37.368328,-122.039109,"Holthouse - terrace"))
+	locations = append(locations, getAGPSObject(37.367189,-122.039141,"Sunnyvale - west"))
+	locations = append(locations, getAGPSObject(37.389324,-122.029620,"KFC SV"))
+	locations = append(locations, getAGPSObject(37.388348, -122.030375,"Starbucks SV"))
+	locations = append(locations, getAGPSObject(37.426914, -122.097788,"BMW"))
+	locations = append(locations, getAGPSObject(37.426506, -122.0977128,"BMW 2"))
 
 	return locations
 }
@@ -119,6 +87,7 @@ func TestZorder(t *testing.T){
 
 	locations := getDataZOrderTest()
 	sort(locations)
+	printlocations(locations)
 	lat1,long1 := getLatLong(locations[0])
 	var distances [] float64
 
@@ -210,16 +179,41 @@ func PrintPreOrder(t *rbt.Node){
 	}
 	fmt.Println(t.Key.(GPSLocation).Location.Zindex)
 	PrintPreOrder(t.Left)
-	//fmt.Println(t.Key.(GPSLocation).Location.Zindex)
 	PrintPreOrder(t.Right)
 
+}
+
+func PrintInOrder(t *rbt.Node){
+
+	if (t  == nil){
+		return
+	}
+
+	PrintInOrder(t.Left)
+	fmt.Println(t.Key.(GPSLocation).Location.Zindex)
+	PrintInOrder(t.Right)
+}
+
+func PrintPostOrder(t *rbt.Node) {
+	if (t == nil) {
+		return
+	}
+
+	PrintPostOrder(t.Left)
+	PrintPostOrder(t.Right)
+	fmt.Println(t.Key.(GPSLocation).Location.Zindex)
 }
 
 func TestPrintTree(t *testing.T){
 	location_tree := TreeExtended{GetTree()}
 
+	fmt.Println("************** PRE ORDER ***************")
 	PrintPreOrder(location_tree.Root)
-	//PrintSuccOrder(location_tree)
+	fmt.Println("************** POST ORDER ***************")
+	PrintPostOrder(location_tree.Root)
+	fmt.Println("************** IN ORDER ***************")
+	PrintInOrder(location_tree.Root)
+	fmt.Println("************** END ORDER ***************")
 }
 
 func (t *TreeExtended)isValidBST(n *rbt.Node) bool{

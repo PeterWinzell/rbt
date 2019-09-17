@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/locationsharing.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="226" selection-start-line="226" selection-end-line="226" />
+            <state relative-caret-position="465">
+              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
               <folding>
                 <element signature="e#14#192#0" expanded="true" />
               </folding>
@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tree_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
+            <state relative-caret-position="3090">
+              <caret line="206" column="33" lean-forward="true" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
               <folding>
                 <element signature="e#14#106#0" expanded="true" />
               </folding>
@@ -40,7 +40,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/testing/testing.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state relative-caret-position="12150">
               <caret line="826" selection-start-line="826" selection-end-line="826" />
             </state>
           </provider>
@@ -58,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
+            <state relative-caret-position="1935">
               <caret line="129" column="42" lean-forward="true" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
             </state>
           </provider>
@@ -67,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geoutil.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
+            <state relative-caret-position="450">
               <caret line="30" column="23" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="23" />
             </state>
           </provider>
@@ -135,8 +135,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1857" />
-    <option name="y" value="30" />
+    <option name="x" value="2164" />
+    <option name="y" value="227" />
     <option name="width" value="1607" />
     <option name="height" value="975" />
   </component>
@@ -147,17 +147,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="interfaceexample" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interfaceexample" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,34 +223,34 @@
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="tree_test_go - 2019.09.05 at 15h 28m 39s.xml">
+    <history-entry file="tree_test_go - 2019.09.06 at 11h 40m 46s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.09.05 at 15h 30m 31s.xml">
+    <history-entry file="tree_test_go - 2019.09.06 at 11h 41m 35s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.09.05 at 15h 37m 39s.xml">
+    <history-entry file="tree_test_go - 2019.09.06 at 11h 49m 13s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.09.05 at 15h 39m 03s.xml">
+    <history-entry file="tree_test_go - 2019.09.06 at 11h 49m 14s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.09.05 at 16h 12m 04s.xml">
+    <history-entry file="tree_test_go - 2019.09.06 at 11h 49m 30s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.09.05 at 16h 13m 53s.xml">
+    <history-entry file="tree_test_go - 2019.09.06 at 11h 58m 30s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.09.05 at 16h 15m 00s.xml">
+    <history-entry file="tree_test_go - 2019.09.17 at 09h 55m 44s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.09.05 at 16h 15m 10s.xml">
+    <history-entry file="tree_test_go - 2019.09.17 at 11h 25m 26s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.09.05 at 16h 18m 07s.xml">
+    <history-entry file="tree_test_go - 2019.09.17 at 11h 26m 51s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="tree_test_go - 2019.09.05 at 16h 18m 08s.xml">
+    <history-entry file="tree_test_go - 2019.09.17 at 11h 28m 13s.xml">
       <configuration name="tree_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
@@ -274,16 +264,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1857" y="30" width="1607" height="975" extended-state="0" />
-    <editor active="true" />
+    <frame x="2164" y="227" width="1607" height="975" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17188498" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17380191" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3578709" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.34088334" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3148358" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24106114" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32911393" />
@@ -383,10 +372,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/locationsharing.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <element signature="e#14#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/testing/testing.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12150">
+          <caret line="826" selection-start-line="826" selection-end-line="826" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/refval.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="129" column="42" lean-forward="true" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geoutil.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/runtime/panic.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7620">
           <caret line="512" selection-start-line="512" selection-end-line="512" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -404,56 +439,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/refval.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="129" column="42" lean-forward="true" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/locationsharing.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="226" selection-start-line="226" selection-end-line="226" />
-          <folding>
-            <element signature="e#14#192#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geoutil.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/testing/testing.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="826" selection-start-line="826" selection-end-line="826" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tree_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
+        <state relative-caret-position="3090">
+          <caret line="206" column="33" lean-forward="true" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
           <folding>
             <element signature="e#14#106#0" expanded="true" />
           </folding>
